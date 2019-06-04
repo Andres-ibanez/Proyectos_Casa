@@ -9,20 +9,20 @@
     <title>Survey Form</title>
 </head>
 <body>
-    <h1>Survey Form</h1>
+    <h1 id="title">Survey Form</h1>
     <div id="container">
-        <p>Let us know how we can improve your experience</p>
-        <form>
+        <p id="description">Let us know how we can improve your experience</p>
+        <form id="survey-form">
             <div class="section">
                 <div class="leftPanel">
-                    <label for="name">*Name: </label>
-                    <label for="email">*Email: </label>
-                    <label for="age">*Age: </label>
+                    <label for="name" id="name-label">*Name: </label>
+                    <label for="email" id="email-label">*Email: </label>
+                    <label for="number" id="number-label">*Age: </label>
                 </div>
                 <div class="rightPanel">
-                    <input type="text" id="name"" placeholder="Enter your name" required>
+                    <input type="text" id="name" placeholder="Enter your name" required>
                     <input type="email" id="email" placeholder="Enter your email" required>
-                    <input type="text" id="age" placeholder="Age" required>    
+                    <input type="number" id="number" placeholder="Age" min="15" max="100" required>    
                 </div>
             </div>
             <div class="section">
@@ -30,7 +30,7 @@
                     <p>Which option best describes your current role?</p>
                 </div>
                 <div class="rightPanel options">
-                    <select name="role" id="role">
+                    <select name="role" id="dropdown">
                         <option value="student">Student</option>
                         <option value="worker">Worker</option>
                         <option value="nosay">Prefer not say</option>
@@ -44,15 +44,15 @@
                 </div>
                 <div class="rightPanel options">
                     <div>
-                        <input type="radio" name="liked" id="definitely">
+                        <input type="radio" name="liked" id="definitely" value="definitely">
                         <label for="definitely">Definitely</label> 
                     </div>
                     <div>
-                        <input type="radio" name="liked">
+                        <input type="radio" name="liked" value="maybe">
                         <label for="maybe">Maybe</label>
                     </div>
                     <div>
-                        <input type="radio" name="liked">
+                        <input type="radio" name="liked" value="notsure">
                         <label for="notsure">Not sure</label>
                     </div>
                 </div>
@@ -76,27 +76,27 @@
                 </div>
                 <div class="rightPanel options">
                     <div>
-                        <input type="checkbox" id="front">
+                        <input type="checkbox" id="front" value="frontend">
                         <label for="frontend">Front-end Projects</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="backend">
+                        <input type="checkbox" id="backend" value="backend">
                         <label for="backend">Back-end Projects</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="wiki">
+                        <input type="checkbox" id="wiki" value="wiki">
                         <label for="wiki">Wiki</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="challenges">
+                        <input type="checkbox" id="challenges" value="challenges">
                         <label for="challenges">Challenges</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="forum">
+                        <input type="checkbox" id="forum" value="forum">
                         <label for="forum">Forum</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="aditionalCourses">
+                        <input type="checkbox" id="aditionalCourses" value="aditionalCourses">
                         <label for="aditionalCourses">Additional Courses</label>
                     </div>
                 </div>
@@ -109,9 +109,10 @@
                     <textarea name="comments" id="coments" cols="30" rows="5" placeholder="Enter your comments"></textarea>
                 </div>
             </div>
-            <button class="button">Submit</button>
+            <button class="button" id="submit">Submit</button>
         </form>
     </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
    
 </body>
 </html>
