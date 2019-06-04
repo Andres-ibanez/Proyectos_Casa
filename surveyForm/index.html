@@ -4,71 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
     <title>Survey Form</title>
 </head>
 <body>
     <h1>Survey Form</h1>
-    <p>Let us know how we can improve your experience</p>
-    <form action="">
-        <div class="section">
-            <label for="name">Name: </label>
-            <input type="text" id="name"" placeholder="Enter your name">
-            <label for="email">Email: </label>
-            <input type="email" id="email" placeholder="Enter your email">
-            <label for="age">Age: </label>
-            <input type="text" id="age" placeholder="Age">    
-        </div>
-        <div class="section">
-            <p>Which option best describes your current role?</p>
-            <select name="role" id="role">
-                <option value="student">Student</option>
-                <option value="worker">Worker</option>
-                <option value="nosay">Prefer not say</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <div class="section">
-            <p>How much you would recommend us to a friend?</p>
-            <input type="radio" name="liked" id="definitely">
-            <label for="definitely">Definitely</label> 
-            <input type="radio" name="liked">Maybe
-            <label for="maybe">Maybe</label>
-            <input type="radio" name="liked">Not sure
-            <label for="notsure">Not sure</label>
-        </div>
-        <div class="section">
-            <p>What do you like most in our system:</p>
-            <select name="role" id="likesystem">
-                <option value="articles">Articles</option>
-                <option value="challenger">Challenger</option>
-                <option value="projects">Projects</option>
-                <option value="comunity">Comunity</option>
-            </select>
-        </div>
-        <div class="section">
-            <p>Things that should be improved in the future</p>
-            <input type="checkbox" id="front">
-            <label for="frontend">Front-end Projects</label>
-            <input type="checkbox" id="backend">
-            <label for="backend">Back-end Projects</label>
-            <input type="checkbox" id="wiki">
-            <label for="wiki">Wiki</label>
-            <input type="checkbox" id="challenges">
-            <label for="challenges">Challenges</label>
-            <input type="checkbox" id="forum">
-            <label for="forum">Forum</label>
-            <input type="checkbox" id="aditionalCourses">
-            <label for="aditionalCourses">Additional Courses</label>
-        </div>
-        <div class="section">
-            <p>Any Comments or Suggestions?</p>
-            <textarea name="comments" id="coments" cols="30" rows="10"></textarea>
-        </div>
-        <button class="button">Submit</button>
-    </form>
-    
-
-    
+    <div id="container">
+        <p>Let us know how we can improve your experience</p>
+        <form>
+            <div class="section">
+                <div class="leftPanel">
+                    <label for="name">*Name: </label>
+                    <label for="email">*Email: </label>
+                    <label for="age">*Age: </label>
+                </div>
+                <div class="rightPanel">
+                    <input type="text" id="name"" placeholder="Enter your name" required>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <input type="text" id="age" placeholder="Age" required>    
+                </div>
+            </div>
+            <div class="section">
+                <div class="leftPanel">
+                    <p>Which option best describes your current role?</p>
+                </div>
+                <div class="rightPanel options">
+                    <select name="role" id="role">
+                        <option value="student">Student</option>
+                        <option value="worker">Worker</option>
+                        <option value="nosay">Prefer not say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="section">
+                <div class="leftPanel">
+                    <p>How much you would recommend us to a friend?</p>
+                </div>
+                <div class="rightPanel options">
+                    <div>
+                        <input type="radio" name="liked" id="definitely">
+                        <label for="definitely">Definitely</label> 
+                    </div>
+                    <div>
+                        <input type="radio" name="liked">
+                        <label for="maybe">Maybe</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="liked">
+                        <label for="notsure">Not sure</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="leftPanel">
+                    <p>What do you like most in our system:</p>
+                </div>
+                <div class="rightPanel options">
+                    <select name="role" id="likesystem">
+                        <option value="articles">Articles</option>
+                        <option value="challenger">Challenger</option>
+                        <option value="projects">Projects</option>
+                        <option value="comunity">Comunity</option>
+                    </select>
+                </div>
+            </div>
+            <div class="section">
+                <div class="leftPanel">
+                    <p>Things that should be improved in the future</p>
+                </div>
+                <div class="rightPanel options">
+                    <div>
+                        <input type="checkbox" id="front">
+                        <label for="frontend">Front-end Projects</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="backend">
+                        <label for="backend">Back-end Projects</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="wiki">
+                        <label for="wiki">Wiki</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="challenges">
+                        <label for="challenges">Challenges</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="forum">
+                        <label for="forum">Forum</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="aditionalCourses">
+                        <label for="aditionalCourses">Additional Courses</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="leftPanel">
+                    <p>Any Comments or Suggestions?</p>
+                </div>
+                <div class="rightPanel">
+                    <textarea name="comments" id="coments" cols="30" rows="5" placeholder="Enter your comments"></textarea>
+                </div>
+            </div>
+            <button class="button">Submit</button>
+        </form>
+    </div>
+   
 </body>
 </html>
