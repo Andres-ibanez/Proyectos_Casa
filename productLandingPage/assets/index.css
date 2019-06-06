@@ -2,12 +2,14 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 #form{
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 #header{
     display: flex;
     justify-content: space-between;
-    align-content: center
+    align-content: center;
 }
 #header-img{
     height: 50px;
@@ -32,6 +34,7 @@
 }
 #nav-bar{
     margin-right: 1vw;
+    display: none;
 }
 #nav-bar li{
     display: inline-block;
@@ -60,5 +63,42 @@
     width: 60px;
 }
 .feature h3{
-    display: inline;
+    display: inline-block;
+}
+
+#email {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 5px 0;
+    grid-column: 1/span 3;
+  }
+#submit {
+    margin: 15px 0;
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    
+  }
+  #submit:active {
+    transform: scale(0.95);
+  }
+ 
+
+@media only screen and (min-width:600px){
+
+    #nav-bar{
+        display: block;
+    }
+
+
 }
