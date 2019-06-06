@@ -1,14 +1,64 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#form{
+    text-align: center;
+}
 #header{
     display: flex;
+    justify-content: space-between;
+    align-content: center
 }
 #header-img{
-
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+}
+#header p{
+    margin: 0;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 30px;
 }
 #nav-link{
-
+    list-style: none;
+}
+#nav-link:hover{
+    background:grey;
+}
+#nav-link a{
+    text-decoration: none;
+    color: black;
+}
+#nav-bar{
+    margin-right: 1vw;
+}
+#nav-bar li{
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
 }
 .heroContainer{
     display: flex;
+    align-items: center;
     align-content: center;
     flex-direction: column;
+}
+.heroContainer input{
+    display: block;
+    margin: 5px;
+    padding: 2px;
+}
+
+.brandLogo{
+    display: flex;
+    align-items: center;
+}
+
+.feature img{
+    height: 60px;
+    width: 60px;
+}
+.feature h3{
+    display: inline;
 }
