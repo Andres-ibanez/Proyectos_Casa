@@ -1,0 +1,14 @@
+#header{
+    display: flex;
+}
+#header-img{
+
+}
+#nav-link{
+
+}
+.heroContainer{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
